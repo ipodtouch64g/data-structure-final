@@ -7,7 +7,7 @@
 #include <iostream>
 #include "ConstParams.h"
 #include <sstream>
-
+#include <vector>
 //price table of the 12 stations
 class PriceTableADT
 {

@@ -7,6 +7,17 @@ class PriceTableIMP : public PriceTableADT
 {
 public:
     // Add your code here
+	//=================================================================
+	// calculate the all pairs shortest patch and store the results
+	// in this->distTable
+	//=================================================================
+	void calcAllPairsShortestPath(std::string mapFile);
+
+	//=================================================================
+	// calculate and return the rental when an ubike is returned
+	//=================================================================
+	int calcPrice(int milageDiff, std::string bClass,
+		std::string from, std::string toStation);
 };
 
 #endif

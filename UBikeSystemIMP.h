@@ -7,6 +7,9 @@ class UBikeSystemIMP : public UBikeSystemADT
 {
 public:
     // Add your code here
+	void InitDistTable(std::string MapFile);
+	
+
 };
 
 #endif
