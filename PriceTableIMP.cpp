@@ -61,10 +61,12 @@ void PriceTableIMP::calcAllPairsShortestPath(std::string mapFile)
 				distTable[StationNames[i]][StationNames[j]] = dist[i][j];
 			}
 		}
-	
 }
 
 int PriceTableIMP::calcPrice(int milageDiff, std::string bClass, std::string from, std::string toStation)
 {
-	return 0;
+	if (milageDiff > distTable.at(from).at(toStation))
+		return oriRates.at(bClass)*milageDiff;
+	else
+		return dscntRates.at(bClass)*distTable.at(from).at(toStation);
 }
