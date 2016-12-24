@@ -39,7 +39,7 @@ void UBikeHashTableIMP::addUBikePtr(UBike * ubptr)
 	//============================================================
 	//put it into hash table
 	//============================================================
-	this->_Elems[address].push_front(ubptr);
+	(*this)[address].push_front(ubptr);
 	
 }
 
@@ -48,12 +48,12 @@ UBike * UBikeHashTableIMP::findUBikePtr(std::string license, bool toRemove)
 	int i = 0;
 	while (i < 256)
 	{
-		for (auto &it : this->_Elems[i])
+		for (auto &it : (*this)[i])
 			if (it->license == license)
 			{
 				if (toRemove)
 				{
-					this->_Elems[i].remove(it);
+					(*this)[i].remove(it);
 					return nullptr;
 				}	
 				else
