@@ -2,7 +2,7 @@
 #define PriceTableIMP_h
 
 #include "readonly/PriceTableADT.h"
-
+#include <vector>
 class PriceTableIMP : public PriceTableADT
 {
 public:

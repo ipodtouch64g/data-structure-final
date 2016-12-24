@@ -4,5 +4,5 @@
 
 void UBikeSystemIMP::InitDistTable(std::string MapFile)
 {
-	
+	priceTable.calcAllPairsShortestPath(MapFile);
 }
